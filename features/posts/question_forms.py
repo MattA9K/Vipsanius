@@ -5,7 +5,6 @@ from django.contrib.auth import get_user_model
 from features.models import Question
 
 
-
 class QuestionForm(forms.ModelForm):
     user = forms.ModelChoiceField(
         widget=forms.HiddenInput,

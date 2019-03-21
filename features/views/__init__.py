@@ -5,3 +5,4 @@ from .question_detail import QuestionDetailView
 
 from .answer_create import CreateAnswerView
 from .answer_acceptance import UpdateAnswerAcceptance
+from .question_list import DailyQuestionList

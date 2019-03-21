@@ -6,20 +6,3 @@ from django.urls.base import reverse
 # Create your models here.
 
 
-class Question(models.Model):
-    title = models.CharField(max_length=140)
-    question = models.TextField()
-    user = models.ForeignKey(to=settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
-    created = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse('questions:question _detail', kwargs={'pk': self.id})
-
-    def can_accept_answers(self, user):
-        return user == self.user
-
-

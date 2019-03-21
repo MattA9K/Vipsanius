@@ -3,7 +3,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
 
-from features.forms import QuestionForm
+from features.posts import QuestionForm
 from features.models import Question
 
 

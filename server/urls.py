@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 import features.routes.question_urls
+import security.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(features.routes.question_urls, namespace='features')),
+    path('security/', include(security.urls, namespace='security')),
 ]

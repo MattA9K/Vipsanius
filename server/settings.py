@@ -134,3 +134,8 @@ MARKDOWNIFY_WHITELIST_TAGS = [
     'h3', 'h4', 'h5', 'h6', 'h7', 'li', 'ol',
     'p', 'strong', 'ul',
 ]
+
+
+LOGIN_URL = 'user:login'
+LOGIN_REDIRECT_URL = 'questions:index'
+LOGOUT_REDIRECT_URL = 'questions:index'

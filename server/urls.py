@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-import features.routes.question_urls
+from features import views
+import features.urls
 import security.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(features.routes.question_urls, namespace='features')),
+    path('', include(features.urls, namespace='features')),
     path('security/', include(security.urls, namespace='security')),
+    path('q/<int:pk>/answer', views.CreateAnswerView.as_view(), name='answer_question'),
+    path('a/<int:pk>/accept', views.UpdateAnswerAcceptance.as_view(), name='update_answer_acceptance'),
 ]

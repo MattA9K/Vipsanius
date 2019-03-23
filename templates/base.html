@@ -1,32 +1,49 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 </head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Answerly{% endblock %}</title>
-    <link href="" rel="stylesheet">
+<meta charset="UTF-8">
+<title>{% block title %}Answerly{% endblock %}</title>
+<link href="" rel="stylesheet">
 
-    <script src="/resources/includes/jquery.js" type="text/javascript"></script>
-    <script src="/resources/includes/popper.js" type="text/javascript"></script>
-    <script src="/resources/includes/moment.js" type="text/javascript"></script>
-    <script src="/resources/includes/nouislider.js" type="text/javascript"></script>
-    <script src="/resources/includes/now-ui-kit.js" type="text/javascript"></script>
-    <script src="/resources/includes/utils.js" type="text/javascript"></script>
-    <script src="/resources/includes/chart.js" type="text/javascript"></script>
-    <script src="/resources/includes/tether.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/volatile/base.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/core.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/buttons.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/core.extras.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/dashicons.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/demo.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/flexslider.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/imgareaselect.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/media-views.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/mediaelementplayer.min.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/now-ui-kit.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/purple.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/style.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/woocommerce.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/woocommerce-layout.css">
+<link rel="stylesheet" type="text/css" href="/volatile/styles/woocommerce-smallscreen.css">
 
-    <script src="/resources/core/bootstrap.js" type="text/javascript"></script>
-    <script src="/resources/core/datetimepicker.js" type="text/javascript"></script>
-    <script src="/resources/core/selectpicker.js" type="text/javascript"></script>
-    <script src="/resources/core/switch.js" type="text/javascript"></script>
-    <script src="/resources/core/tagsinput.js" type="text/javascript"></script>
+<script src="/volatile/includes/jquery.js" type="text/javascript"></script>
+<script src="/volatile/includes/popper.js" type="text/javascript"></script>
+<script src="/volatile/includes/moment.js" type="text/javascript"></script>
+<script src="/volatile/includes/nouislider.js" type="text/javascript"></script>
+<script src="/volatile/includes/now-ui-kit.js" type="text/javascript"></script>
+<script src="/volatile/includes/utils.js" type="text/javascript"></script>
+<script src="/volatile/includes/chart.js" type="text/javascript"></script>
+<script src="/volatile/includes/tether.js" type="text/javascript"></script>
+
+<script src="/volatile/core/bootstrap.js" type="text/javascript"></script>
+<script src="/volatile/core/datetimepicker.js" type="text/javascript"></script>
+<script src="/volatile/core/selectpicker.js" type="text/javascript"></script>
+<script src="/volatile/core/switch.js" type="text/javascript"></script>
+<script src="/volatile/core/tagsinput.js" type="text/javascript"></script>
 </head>
 
 
-
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">Answerly</a>
         <ul class="navbar-nav">
@@ -42,15 +59,15 @@
                 </a>
             </li>
             {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'security:login' %}">Login</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'security:login' %}">Login</a>
 
-            </li>
+                </li>
             {% else %}
-            <li class="nav-item">
-                <a class="nav-link" href="{%  url 'security:login' %}">Login</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'security:login' %}">Login</a>
 
-            </li>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'security:register' %}">Register</a>
 
@@ -64,7 +81,6 @@
     {% endblock %}
 </div>
 </body>
-
 
 
 </html>

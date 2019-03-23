@@ -21,8 +21,8 @@ import security.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(features.urls, namespace='features')),
-    path('security/', include(security.urls, namespace='security')),
+    path('', include('features.urls', namespace='features')),
+    path('security/', include('security.urls', namespace='user')),
     path('q/<int:pk>/answer', views.CreateAnswerView.as_view(), name='answer_question'),
     path('a/<int:pk>/accept', views.UpdateAnswerAcceptance.as_view(), name='update_answer_acceptance'),
 ]
